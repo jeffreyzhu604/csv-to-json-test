@@ -16,8 +16,8 @@ def xml_to_csv(xml, csv):
     tests = []
 
     for test in test_set:
+            # 'output' : list(test)[1].text.strip(),
         curr = {
-            'output' : list(test)[1].text.strip(),
             'delimiter' : list(test)[2].text.strip(),
             'quote' : list(test)[3].text.strip(),
             'trim' : list(test)[4].text.strip(),
