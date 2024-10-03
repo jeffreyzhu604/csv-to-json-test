@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<System name="csvtojson">
+  <Parameters>
+    <Parameter id="0" name="output" type="1">
+      <values>
+        <value>json</value>
+        <value>csv</value>
+        <value>line</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="1" name="delimiter" type="1">
+      <values>
+        <value>comma</value>
+        <value>semicolon</value>
+        <value>colcon</value>
+        <value>tab</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="2" name="quote" type="1">
+      <values>
+        <value>single_quote</value>
+        <value>double_quote</value>
+        <value>off</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="3" name="trim" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="4" name="checkType" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="5" name="ignoreEmpty" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="6" name="noheader" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="7" name="headers" type="1">
+      <values>
+        <value>fieldname</value>
+        <value>none</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="8" name="flatKeys" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="9" name="maxRowLength" type="0">
+      <values>
+        <value>0</value>
+        <value>10240</value>
+        <value>256</value>
+        <value>512</value>
+        <value>1024</value>
+        <value>2048</value>
+        <value>4096</value>
+        <value>8192</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="10" name="checkColumn" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="11" name="eol" type="1">
+      <values>
+        <value>n</value>
+        <value>r</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="12" name="quiet" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="13" name="escape" type="1">
+      <values>
+        <value>default</value>
+        <value>custom</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="14" name="colParser" type="1">
+      <values>
+        <value>col1</value>
+        <value>col2</value>
+        <value>col3</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="15" name="alwaysSplitAtEOL" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="16" name="nullObject" type="2">
+      <values>
+        <value>true</value>
+        <value>false</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+    <Parameter id="17" name="downstreamFormat" type="1">
+      <values>
+        <value>line</value>
+        <value>array</value>
+        <value>none</value>
+      </values>
+      <basechoices />
+      <invalidValues />
+    </Parameter>
+  </Parameters>
+  <OutputParameters />
+  <Relations />
+  <Constraints>
+    <Constraint text="(output != &quot;json&quot;) =&gt; (downstreamFormat = &quot;none&quot;)&#xD;&#xA;&#xD;&#xA;">
+      <Parameters>
+        <Parameter name="output" />
+        <Parameter name="downstreamFormat" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(noheader=false) =&gt; (headers = &quot;fieldname&quot;)">
+      <Parameters>
+        <Parameter name="noheader" />
+        <Parameter name="headers" />
+      </Parameters>
+    </Constraint>
+    <Constraint text="(noheader=true) =&gt; (headers = &quot;none&quot;)">
+      <Parameters>
+        <Parameter name="noheader" />
+        <Parameter name="headers" />
+      </Parameters>
+    </Constraint>
+  </Constraints>
+  <Testset doi="2">
+    <Testcase TCNo="0">
+      <Value>1</Value>
+      <Value>csv</Value>
+      <Value>comma</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>false</Value>
+      <Value>0</Value>
+      <Value>false</Value>
+      <Value>r</Value>
+      <Value>false</Value>
+      <Value>custom</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="1">
+      <Value>2</Value>
+      <Value>line</Value>
+      <Value>semicolon</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>0</Value>
+      <Value>true</Value>
+      <Value>n</Value>
+      <Value>true</Value>
+      <Value>default</Value>
+      <Value>col3</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="2">
+      <Value>3</Value>
+      <Value>json</Value>
+      <Value>colcon</Value>
+      <Value>single_quote</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>0</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>line</Value>
+    </Testcase>
+    <Testcase TCNo="3">
+      <Value>4</Value>
+      <Value>csv</Value>
+      <Value>tab</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>true</Value>
+      <Value>0</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="4">
+      <Value>5</Value>
+      <Value>line</Value>
+      <Value>comma</Value>
+      <Value>single_quote</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>false</Value>
+      <Value>10240</Value>
+      <Value>true</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col2</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="5">
+      <Value>6</Value>
+      <Value>json</Value>
+      <Value>semicolon</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>10240</Value>
+      <Value>false</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col3</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>array</Value>
+    </Testcase>
+    <Testcase TCNo="6">
+      <Value>7</Value>
+      <Value>csv</Value>
+      <Value>colcon</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>10240</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="7">
+      <Value>8</Value>
+      <Value>line</Value>
+      <Value>tab</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>10240</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="8">
+      <Value>9</Value>
+      <Value>json</Value>
+      <Value>comma</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>true</Value>
+      <Value>256</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>default</Value>
+      <Value>col3</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>line</Value>
+    </Testcase>
+    <Testcase TCNo="9">
+      <Value>10</Value>
+      <Value>csv</Value>
+      <Value>semicolon</Value>
+      <Value>single_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>false</Value>
+      <Value>256</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="10">
+      <Value>11</Value>
+      <Value>line</Value>
+      <Value>colcon</Value>
+      <Value>double_quote</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>256</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>default</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="11">
+      <Value>12</Value>
+      <Value>json</Value>
+      <Value>tab</Value>
+      <Value>single_quote</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>false</Value>
+      <Value>256</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col3</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>array</Value>
+    </Testcase>
+    <Testcase TCNo="12">
+      <Value>13</Value>
+      <Value>csv</Value>
+      <Value>comma</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>512</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="13">
+      <Value>14</Value>
+      <Value>line</Value>
+      <Value>semicolon</Value>
+      <Value>off</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>false</Value>
+      <Value>512</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col2</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="14">
+      <Value>15</Value>
+      <Value>json</Value>
+      <Value>colcon</Value>
+      <Value>single_quote</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>true</Value>
+      <Value>512</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col3</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>array</Value>
+    </Testcase>
+    <Testcase TCNo="15">
+      <Value>16</Value>
+      <Value>json</Value>
+      <Value>tab</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>512</Value>
+      <Value>false</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>line</Value>
+    </Testcase>
+    <Testcase TCNo="16">
+      <Value>17</Value>
+      <Value>csv</Value>
+      <Value>comma</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>1024</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col3</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="17">
+      <Value>18</Value>
+      <Value>line</Value>
+      <Value>semicolon</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>true</Value>
+      <Value>1024</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="18">
+      <Value>19</Value>
+      <Value>json</Value>
+      <Value>colcon</Value>
+      <Value>single_quote</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>1024</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>array</Value>
+    </Testcase>
+    <Testcase TCNo="19">
+      <Value>20</Value>
+      <Value>json</Value>
+      <Value>tab</Value>
+      <Value>single_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>false</Value>
+      <Value>1024</Value>
+      <Value>false</Value>
+      <Value>r</Value>
+      <Value>false</Value>
+      <Value>custom</Value>
+      <Value>col3</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>line</Value>
+    </Testcase>
+    <Testcase TCNo="20">
+      <Value>21</Value>
+      <Value>csv</Value>
+      <Value>comma</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>2048</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col3</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="21">
+      <Value>22</Value>
+      <Value>line</Value>
+      <Value>semicolon</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>true</Value>
+      <Value>2048</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="22">
+      <Value>23</Value>
+      <Value>json</Value>
+      <Value>colcon</Value>
+      <Value>single_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>2048</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>line</Value>
+    </Testcase>
+    <Testcase TCNo="23">
+      <Value>24</Value>
+      <Value>json</Value>
+      <Value>tab</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>2048</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>array</Value>
+    </Testcase>
+    <Testcase TCNo="24">
+      <Value>25</Value>
+      <Value>csv</Value>
+      <Value>comma</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>4096</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col3</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="25">
+      <Value>26</Value>
+      <Value>line</Value>
+      <Value>semicolon</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>true</Value>
+      <Value>4096</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="26">
+      <Value>27</Value>
+      <Value>json</Value>
+      <Value>colcon</Value>
+      <Value>single_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>4096</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>default</Value>
+      <Value>col2</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>line</Value>
+    </Testcase>
+    <Testcase TCNo="27">
+      <Value>28</Value>
+      <Value>json</Value>
+      <Value>tab</Value>
+      <Value>single_quote</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>false</Value>
+      <Value>4096</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>array</Value>
+    </Testcase>
+    <Testcase TCNo="28">
+      <Value>29</Value>
+      <Value>csv</Value>
+      <Value>comma</Value>
+      <Value>double_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>8192</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col3</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="29">
+      <Value>30</Value>
+      <Value>line</Value>
+      <Value>semicolon</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>true</Value>
+      <Value>8192</Value>
+      <Value>true</Value>
+      <Value>r</Value>
+      <Value>true</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="30">
+      <Value>31</Value>
+      <Value>json</Value>
+      <Value>colcon</Value>
+      <Value>single_quote</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>8192</Value>
+      <Value>true</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>default</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>line</Value>
+    </Testcase>
+    <Testcase TCNo="31">
+      <Value>32</Value>
+      <Value>json</Value>
+      <Value>tab</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>fieldname</Value>
+      <Value>false</Value>
+      <Value>8192</Value>
+      <Value>false</Value>
+      <Value>r</Value>
+      <Value>false</Value>
+      <Value>custom</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>array</Value>
+    </Testcase>
+    <Testcase TCNo="32">
+      <Value>33</Value>
+      <Value>json</Value>
+      <Value>comma</Value>
+      <Value>off</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>512</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>custom</Value>
+      <Value>col2</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>none</Value>
+    </Testcase>
+    <Testcase TCNo="33">
+      <Value>34</Value>
+      <Value>json</Value>
+      <Value>semicolon</Value>
+      <Value>off</Value>
+      <Value>false</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>true</Value>
+      <Value>10240</Value>
+      <Value>false</Value>
+      <Value>n</Value>
+      <Value>false</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>line</Value>
+    </Testcase>
+    <Testcase TCNo="34">
+      <Value>35</Value>
+      <Value>json</Value>
+      <Value>comma</Value>
+      <Value>double_quote</Value>
+      <Value>true</Value>
+      <Value>false</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>none</Value>
+      <Value>false</Value>
+      <Value>0</Value>
+      <Value>false</Value>
+      <Value>r</Value>
+      <Value>false</Value>
+      <Value>custom</Value>
+      <Value>col1</Value>
+      <Value>true</Value>
+      <Value>true</Value>
+      <Value>array</Value>
+    </Testcase>
+  </Testset>
+  <Header>
+    <Value />
+    <Value>OUTPUT</Value>
+    <Value>DELIMITER</Value>
+    <Value>QUOTE</Value>
+    <Value>TRIM</Value>
+    <Value>CHECKTYPE</Value>
+    <Value>IGNOREEMPTY</Value>
+    <Value>NOHEADER</Value>
+    <Value>HEADERS</Value>
+    <Value>FLATKEYS</Value>
+    <Value>MAXROWLENGTH</Value>
+    <Value>CHECKCOLUMN</Value>
+    <Value>EOL</Value>
+    <Value>QUIET</Value>
+    <Value>ESCAPE</Value>
+    <Value>COLPARSER</Value>
+    <Value>ALWAYSSPLITATEOL</Value>
+    <Value>NULLOBJECT</Value>
+    <Value>DOWNSTREAMFORMAT</Value>
+  </Header>
+  <Stat-Data>
+    <ExecutionTime>0.05</ExecutionTime>
+    <MaxDomainSize>8</MaxDomainSize>
+    <MinDomainSize>2</MinDomainSize>
+    <TotalNoOfCombination>1064</TotalNoOfCombination>
+    <TotalNoOfTests>35</TotalNoOfTests>
+    <Algorithm>IPOG</Algorithm>
+  </Stat-Data>
+</System>
+
