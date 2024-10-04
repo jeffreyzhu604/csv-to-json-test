@@ -2,6 +2,13 @@ import subprocess
 import pandas as pd
 import ast
 import pytest
+import os
+
+def get_path(relative_path):
+    absolute_path = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(absolute_path, relative_path)
+
+    return file_path
 
 def read_csv(file_path):
     """Read and parse the CSV file."""
@@ -103,8 +110,10 @@ def execute_command_line_option(params, csv):
 
 # Example of reading and testing the command with parameters
 def test_csv_to_json():
+    csv_path = get_path('../tests/test_files/draft.csv')
+
     # Read the CSV file with test parameters
-    test_params_df = read_csv('../tests/test_files/draft.csv')
+    test_params_df = read_csv(csv_path)
     print('test\n', test_params_df)
     for index, row in test_params_df.iterrows():
         params = row.to_dict()  # Convert row to dictionary for easier access
@@ -114,7 +123,7 @@ def test_csv_to_json():
         print(f'params for test case {index + 1}: {params}')
 
         # Execute command with parsed parameters
-        result_stdout, result_stderr = execute_command_line_option(params, '../tests/test_files/test1.csv')
+        result_stdout, result_stderr = execute_command_line_option(params, csv_path)
 
         print(f"Test Case {index + 1}:")
         print("Parameters:", params)
