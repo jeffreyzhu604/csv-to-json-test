@@ -16,25 +16,21 @@ def xml_to_csv(xml, csv):
     tests = []
 
     for test in test_set:
-            # 'output' : list(test)[1].text.strip(),
         curr = {
-            'delimiter' : list(test)[2].text.strip(),
-            'quote' : list(test)[3].text.strip(),
-            'trim' : list(test)[4].text.strip(),
-            'checktype' : list(test)[5].text.strip(),
-            'ignoreempty' : list(test)[6].text.strip(),
-            'noheader' : list(test)[7].text.strip(),
-            'header' : list(test)[8].text.strip(),
-            'flatkeys' : list(test)[9].text.strip(),
-            'maxrowlength' : list(test)[10].text.strip(),
-            'checkcolumn' : list(test)[11].text.strip(),
-            'eol' : list(test)[12].text.strip(),
-            'quiet' : list(test)[13].text.strip(),
-            'escape' : list(test)[14].text.strip(),
-            'colparser' : list(test)[15].text.strip(),           
-            'alwayssplitateol' : list(test)[16].text.strip(),
-            'nullobject' : list(test)[17].text.strip(),
-            'downstreamformat' : list(test)[18].text.strip()
+            'delimiter' : list(test)[1].text.strip(),
+            'quote' : list(test)[2].text.strip(),
+            'trim' : list(test)[3].text.strip(),
+            'checktype' : list(test)[4].text.strip(),
+            'ignoreempty' : list(test)[5].text.strip(),
+            'noheader' : list(test)[6].text.strip(),
+            'header' : list(test)[7].text.strip(),
+            'flatkeys' : list(test)[8].text.strip(),
+            'maxrowlength' : list(test)[9].text.strip(),
+            'checkcolumn' : list(test)[10].text.strip(),
+            'quiet' : list(test)[11].text.strip(),
+            'escape' : list(test)[12].text.strip(),
+            'nullobject' : list(test)[13].text.strip(),
+            'downstreamformat' : list(test)[14].text.strip()
         }
         tests.append(curr)
     

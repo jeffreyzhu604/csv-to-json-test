@@ -1,2 +1,0 @@
-delimiter,quote,trim,checktype,ignoreempty,noheader,header,flatkeys,maxrowlength,checkcolumn,eol,quiet,escape,colparser,alwayssplitateol,nullobject,downstreamformat
-"[\";\", \":\"]",off,true,true,true,false,"[\"fname\",\"lname\",\"age\",\"countryOfResidence\",\"slogan.best\",\"slogan.best\"]",true,0,true,n,true,default,"{\"fname\":\"string\",\"lname\":\"string\",\"age\":\"number\",\"countryOfResidence\":\"string\",\"slogan.best\":\"string\"}",true,true,line
