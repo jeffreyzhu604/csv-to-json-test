@@ -1,19 +1,28 @@
 import subprocess
 import pandas as pd
 import pytest
-import os
-
-def get_path(relative_path):
-    absolute_path = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(absolute_path, relative_path)
-
-    return file_path
 
 command_line_map = {
+    'default_delim' : 'default',
     'semicolon' : '\'[";"]\'',
-    'comma' : '\'[","]\'',
+    'dash' : '\'["-"]\'',
     'tab' : '\'["\t"]\'',
-    'colcon' : '\'[":"]\'',
+    'colon' : '\'[":"]\'',
+
+    'default_quote': 'default',
+    'off' : 'off',
+    '$' : '$',
+    '#' : '#',  
+
+    'false' : 'false',
+    'true_no_error' : 'true_no_error',
+    'true_checkCol_error' : 'true_checkCol_error',
+    'true_maxRow_error' : 'true_maxRow_error',
+    
+    'default_escape' : 'default',
+    'back_slash' : '\\',
+    'foward_slash' : '/',
+    
     'fieldname' : '\'["fname","lname","age","countryOfResidence","slogan.best","slogan.best"]\'',
     'none' : 'none'
 }
@@ -21,21 +30,24 @@ command_line_map = {
 def read_csv(file_path):
     df = pd.read_csv(
         file_path,
-        delimiter=',',        # Match the delimiter used in the CSV file
-        quotechar='"',        # Match the quote used in the CSV file
-        escapechar='\\',      # Escape character if needed
-        on_bad_lines='skip',  # Skip bad lines
-        header=0              # Use the first row as header
+        delimiter=',',        
+        quotechar='"',       
+        escapechar='\\',      
+        on_bad_lines='skip',  
+        header=0              
     )
 
-    # Directly assign expected strings if delimiter or header match criteria
     df['delimiter'] = df['delimiter'].map(lambda x : command_line_map[x])
+    df['quote'] = df['quote'].map(lambda x: command_line_map[x])
+    df['quiet'] = df['quiet'].map(lambda x : command_line_map[x])
+    df['escape'] = df['escape'].map(lambda x : command_line_map[x])
     df['header'] = df['header'].map(lambda x : command_line_map[x])
 
     return df
 
 
 def execute_command_line_option(params, csv, test_case_number):
+    print(csv)
     command = (
         "csvtojson "
         f"--delimiter={params['delimiter']} "
@@ -60,7 +72,7 @@ def execute_command_line_option(params, csv, test_case_number):
 
 
 def test_csv_to_json():
-    csv_path = get_path('../tests/test_files/command_line_options.csv')    
+    csv_path = '../resources/command_line_options.csv'
     test_params_df = read_csv(csv_path)
 
     if test_params_df.empty:
@@ -74,7 +86,7 @@ def test_csv_to_json():
         print(f'Test Case {test_case_number}:')
         print("Parameters:", params)
 
-        result_stdout, result_stderr = execute_command_line_option(params, get_path(f"../tests/test_files/test{test_case_number}.csv"), test_case_number)
+        result_stdout, result_stderr = execute_command_line_option(params, f"../tests/test_files/test{test_case_number}.csv", test_case_number)
 
         print("Output:")
         print(result_stdout)
