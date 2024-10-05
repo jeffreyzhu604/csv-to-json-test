@@ -1,6 +1,9 @@
 [
-{"fname":"Jeff","lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
-{"lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
-{"fname":"null","lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
-{"fname":"Jeff","lname":"Zhu","age":"\"90\"","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""}
+[,
+{"field1":"fname","field2":"lname","field3":"age","field4":"countryOfResidence","field5":"slogan.best","field6":"slogan.worst"},,
+{"field1":"Jeff","field2":"Zhu","field3":"90","field4":"Canada","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+{"field2":"Zhu","field3":"90","field4":"Canada","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+{"field1":null,"field2":"Zhu","field3":"90","field4":"Canada","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+{"field1":"Jeff","field2":"Zhu","field3":"\"90\"","field4":"Canada","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+]
 ]

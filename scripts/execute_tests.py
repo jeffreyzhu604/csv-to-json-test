@@ -61,13 +61,23 @@ def fetch_error_file(error_type, test_case_number):
 
 def execute_command_line_option(params, csv, test_case_number):
 
+    csv = csv if params['quiet'] == 'true' else fetch_error_file(params['quiet'], test_case_number)
+
+    if params['noheader'] != 'true_header_excluded':
+        with open(csv, 'r') as csvfile:
+            data = csvfile.readlines()[1:]  
+
+        temp_csv = f"../tests/test_files/temp_test{test_case_number}.csv"
+        with open(temp_csv, 'w') as temp_file:
+            temp_file.writelines(data)
+
     command = (
         "csvtojson "
         f"--delimiter=\'{params['delimiter']}\' "
         f"{'--quote=' + params['quote'] if params['quote'] != 'default' else ''} "  
         f"--trim={'true' if params['trim'] else 'false'} "
         f"--ignoreEmpty={'true' if params['ignoreEmpty'] else 'false'} "
-        f"--noheader={'true' if params['noheader'] else 'false'} "
+        f"--noheader={'false' if params['noheader'] == 'false' else 'true'} "
         f"{'--headers=' + command_line_map[str(params['maxRowLength'])] if params['headers'] != 'none' else ''} "
         f"--flatKeys={'true' if params['flatKeys'] else 'false'} "
         f"--checkType={'true' if params['checkType'] else 'false'} "
@@ -78,7 +88,7 @@ def execute_command_line_option(params, csv, test_case_number):
         f"--nullObject={'true' if params['nullObject'] else 'false'} "
         f"--downstreamFormat={params['downstreamFormat']} "
         # f"{csv} > ../tests/expected_output/test{test_case_number}_output.json"
-        f"{csv if params['quiet'] == 'true' else fetch_error_file(params['quiet'], test_case_number)}"
+        f"{csv}"
     )
     
     print(command)

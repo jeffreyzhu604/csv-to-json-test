@@ -1,9 +1,7 @@
 [
-[,
-{"field1":"fname; lname; age; countryOfResidence; slogan.best; slogan.worst"},,
-{"field1":"Jeff; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"field1":"; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"field1":"null ; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"field1":"Jeff; Zhu; \"90\"; Canada; \"     Ayyy     \"; \"haha\""},,
-]
+{"field1":"fname; lname; age; countryOfResidence; slogan.best; slogan.worst"},
+{"field1":"Jeff; Zhu; 90; Canada; \"     Ayyy     \"; \"hahahahahahahahahahahahahahahahahahahahahaha\""},
+{"field1":"; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},
+{"field1":"null ; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},
+{"field1":"Jeff; Zhu; \"90\"; Canada; \"     Ayyy     \"; \"haha\""}
 ]
