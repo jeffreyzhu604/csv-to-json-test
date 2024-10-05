@@ -1,28 +1,28 @@
-# ACTS Test Suite Generation: Fri Oct 04 16:38:21 PDT 2024
+# ACTS Test Suite Generation: Fri Oct 04 17:03:33 PDT 2024
 #  '*' represents don't care value 
 # Degree of interaction coverage: 2
 # Number of parameters: 14
 # Maximum number of values per parameter: 5
 # Number of configurations: 21
 delimiter,quote,trim,checkType,ignoreEmpty,noheader,headers,flatKeys,maxRowLength,checkColumn,escape,nullObject,downstreamFormat,quiet
-tab,off,false,false,false,false,fieldname,false,20,true,forward_slash,false,array,true_checkCol_error
-tab,default_quote,true,true,true,true,none,true,40,false,default_escape,true,line,true_maxRow_error
-tab,#,false,true,false,true,none,false,60,true,back_slash,true,array,false
-tab,$,true,false,true,false,fieldname,true,0,false,forward_slash,false,line,true_no_error
-semicolon,off,false,false,true,false,fieldname,false,40,false,default_escape,true,array,false
-semicolon,default_quote,true,false,false,true,none,true,60,true,back_slash,false,line,true_no_error
-semicolon,#,true,true,true,false,fieldname,false,0,true,default_escape,false,line,true_checkCol_error
-semicolon,$,false,true,false,true,none,true,20,false,back_slash,true,array,true_maxRow_error
-colon,off,true,true,true,false,fieldname,false,60,true,forward_slash,false,line,true_maxRow_error
-colon,default_quote,false,false,false,true,none,true,0,false,back_slash,true,array,false
-colon,#,true,true,true,false,fieldname,false,20,false,default_escape,true,array,true_no_error
-colon,$,false,false,false,false,fieldname,true,40,true,back_slash,false,line,true_checkCol_error
-dash,off,false,false,true,true,none,true,0,false,back_slash,true,line,true_maxRow_error
-dash,default_quote,true,true,false,false,fieldname,false,20,true,forward_slash,false,line,false
-dash,#,false,false,false,true,none,true,40,true,forward_slash,true,array,true_no_error
-dash,$,false,false,false,true,none,false,60,true,default_escape,true,line,true_checkCol_error
-default_delim,off,true,true,true,false,fieldname,true,0,false,forward_slash,false,line,true_no_error
-default_delim,default_quote,false,false,false,true,none,false,20,true,default_escape,true,array,true_checkCol_error
-default_delim,#,true,false,false,false,fieldname,false,40,true,back_slash,true,line,true_maxRow_error
-default_delim,$,true,true,false,true,none,true,60,false,default_escape,false,array,false
-semicolon,off,true,true,true,false,fieldname,false,20,true,forward_slash,false,array,true_maxRow_error
+semicolon,off,false,false,false,false,fieldname,false,20,true,forward_slash,false,array,true_checkCol_error
+semicolon,default_quote,true,true,true,true,none,true,40,false,default_escape,true,line,true_maxRow_error
+semicolon,#,false,true,false,true,none,false,60,true,back_slash,true,array,false
+semicolon,$,true,false,true,false,fieldname,true,0,false,forward_slash,false,line,true_no_error
+colon,off,false,false,true,false,fieldname,false,40,false,default_escape,true,array,false
+colon,default_quote,true,false,false,true,none,true,60,true,back_slash,false,line,true_no_error
+colon,#,true,true,true,false,fieldname,false,0,true,default_escape,false,line,true_checkCol_error
+colon,$,false,true,false,true,none,true,20,false,back_slash,true,array,true_maxRow_error
+dash,off,true,true,true,false,fieldname,false,60,true,forward_slash,false,line,true_maxRow_error
+dash,default_quote,false,false,false,true,none,true,0,false,back_slash,true,array,false
+dash,#,true,true,true,false,fieldname,false,20,false,default_escape,true,array,true_no_error
+dash,$,false,false,false,false,fieldname,true,40,true,back_slash,false,line,true_checkCol_error
+default_delim,off,false,false,true,true,none,true,0,false,back_slash,true,line,true_maxRow_error
+default_delim,default_quote,true,true,false,false,fieldname,false,20,true,forward_slash,false,line,false
+default_delim,#,false,false,false,true,none,true,40,true,forward_slash,true,array,true_no_error
+default_delim,$,false,false,false,true,none,false,60,true,default_escape,true,line,true_checkCol_error
+exclamation,off,true,true,true,false,fieldname,true,0,false,forward_slash,false,line,true_no_error
+exclamation,default_quote,false,false,false,true,none,false,20,true,default_escape,true,array,true_checkCol_error
+exclamation,#,true,false,false,false,fieldname,false,40,true,back_slash,true,line,true_maxRow_error
+exclamation,$,true,true,false,true,none,true,60,false,default_escape,false,array,false
+colon,off,true,true,true,false,fieldname,false,20,true,forward_slash,false,array,true_maxRow_error
