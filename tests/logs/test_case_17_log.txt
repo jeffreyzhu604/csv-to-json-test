@@ -1,9 +1,10 @@
 Test Case 17:
 command
-csvtojson --delimiter='default' --quote=$ --trim=true --ignoreEmpty=false --noheader=false --headers='["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]' --flatKeys=false --checkType=false --maxRowLength=60 --checkColumn=false --quiet=false --escape=default --nullObject=false --downstreamFormat=line ../tests/test_files/test17_no_error.csv
+csvtojson --delimiter='default' --quote=$ --trim=false --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=true --maxRowLength=40 --checkColumn=true --quiet=false --escape=\ --nullObject=true --downstreamFormat=array ../tests/test_files/test17_check_col_error.csv
 Output:
+unknown parameter ../tests/test_files/test17_check_col_error.csv.
 [
-
+]
 ]
 
 Error:

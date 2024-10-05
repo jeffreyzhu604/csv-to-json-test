@@ -1,10 +1,10 @@
 Test Case 14:
 command
-csvtojson --delimiter='["-"]' --quote=$ --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=true --maxRowLength=40 --checkColumn=true --quiet=false --escape=\ --nullObject=true --downstreamFormat=array ../tests/test_files/test14_no_error.csv
+csvtojson --delimiter='["-"]' --quote=$ --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=true --maxRowLength=40 --checkColumn=false --quiet=false --escape=/ --nullObject=false --downstreamFormat=line ../tests/test_files/test14_max_row_error.csv
 Output:
-unknown parameter ../tests/test_files/test14_no_error.csv.
+unknown parameter ../tests/test_files/test14_max_row_error.csv.
 [
-]
+
 ]
 
 Error:

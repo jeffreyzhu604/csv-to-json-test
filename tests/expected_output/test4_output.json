@@ -1,7 +1,12 @@
 [
-{"field1":"fname; lname; age; countryOfResidence; slogan.best; slogan.worst"},
-{"field1":"Jeff; Zhu; 90; Canada; \"     Ayyy     \"; \"hahahahahahahahahahahahahahahahahahahahahaha\""},
-{"field1":"; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},
-{"field1":"null ; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},
-{"field1":"Jeff; Zhu; \"90\"; Canada; \"     Ayyy     \"; \"haha\""}
+{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
+{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"},
+{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
+{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life","slogan.worst":"s good#","field7":"#wompwomp#"},
+{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
+{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"},
+{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Lougheed","slogan.best":"#     Ayyy     #","slogan.worst":"#haha#"},
+{"fname.nickname":"HoJun","lname":"Zhu","age":"90","countryOfResidence.city.town":"Lougheed","slogan.best":"#     Life's good     #","slogan.worst":"#wompwomp#"},
+{"fname.nickname":"null","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
+{"fname.nickname":"HoJun","lname":"null","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"}
 ]
