@@ -1,6 +1,6 @@
 Test Case 4:
 command
-csvtojson --delimiter='["-"]'  --trim=true --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=false --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/test_max_row_error4.csv
+csvtojson --delimiter='["-"]'  --trim=true --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=false --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/test4_max_row_error.csv
 Output:
 [
 {"field1":"fname; lname; age; countryOfResidence; slogan.best; slogan.worst"},
