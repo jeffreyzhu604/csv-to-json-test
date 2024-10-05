@@ -2,6 +2,7 @@ Test Case 11:
 command
 csvtojson --delimiter='[";"]' --quote=off --trim=false --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=false --maxRowLength=20 --checkColumn=false --quiet=false --escape=/ --nullObject=false --downstreamFormat=array ../tests/test_files/test_no_error_11.csv
 Output:
+unknown parameter ../tests/test_files/test_no_error_11.csv.
 [
 ]
 ]

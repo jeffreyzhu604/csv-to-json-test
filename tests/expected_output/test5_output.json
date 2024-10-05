@@ -1,8 +1,8 @@
 [
 [,
-{"fname":"Jeff; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"fname":"; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"fname":"null ; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"fname":"Jeff; Zhu; \"90\"; Canada; \"     Ayyy     \"; \"haha\""},,
+{"fname.nickname":"Jeff; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
+{"fname.nickname":"; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
+{"fname.nickname":"null ; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
+{"fname.nickname":"Jeff; Zhu; \"90\"; Canada; \"     Ayyy     \"; \"haha\""},,
 ]
 ]

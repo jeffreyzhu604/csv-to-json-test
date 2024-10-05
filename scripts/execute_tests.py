@@ -12,7 +12,7 @@ command_line_map = {
     '20' : '\'["fname","lname","age"]\'',
     '40' : '\'["fname","lname","age","countryOfResidence"]\'',
     '60' : '\'["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]\'',
-    '0' : '\'["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]\'',
+    '0' : '\'["fname.nickname","lname","age","countryOfResidence.city.town","slogan.best","slogan.worst"]\'',
 
     'default_quote': 'default',
     'off' : 'off',
@@ -48,6 +48,7 @@ def read_csv(file_path):
     df['headers'] = df['headers'].map(lambda x: command_line_map[x] if x == 'none' else x)
 
     df = df.sort_values(by=["maxRowLength"], ascending=True) 
+    df.to_csv('sorted.csv', index=False)
     # print(df)
     return df
 
@@ -63,7 +64,7 @@ def execute_command_line_option(params, csv, test_case_number):
 
     csv = csv if params['quiet'] == 'true' else fetch_error_file(params['quiet'], test_case_number)
 
-    if params['noheader'] != 'true_header_excluded':
+    if params['noheader'] != 'true_header_included':
         with open(csv, 'r') as csvfile:
             data = csvfile.readlines()[1:]  
 

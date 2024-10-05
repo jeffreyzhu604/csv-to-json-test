@@ -1,8 +1,7 @@
 Test Case 3:
 command
-csvtojson --delimiter='default' --quote=off --trim=true --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=false --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/test_check_col_error3.csv
+csvtojson --delimiter='default' --quote=off --trim=true --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=true --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/test_check_col_error3.csv
 Output:
-unknown parameter ../tests/test_files/test_check_col_error3.csv.
 [
 
 ]

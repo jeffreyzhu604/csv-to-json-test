@@ -1,13 +1,13 @@
 Test Case 5:
 command
-csvtojson --delimiter='["!"]' --quote=off --trim=false --ignoreEmpty=true --noheader=false --headers='["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]' --flatKeys=true --checkType=true --maxRowLength=0 --checkColumn=false --quiet=true --escape=/ --nullObject=true --downstreamFormat=array ../tests/test_files/test5.csv
+csvtojson --delimiter='["!"]' --quote=off --trim=false --ignoreEmpty=true --noheader=false --headers='["fname.nickname","lname","age","countryOfResidence.city.town","slogan.best","slogan.worst"]' --flatKeys=true --checkType=true --maxRowLength=0 --checkColumn=false --quiet=true --escape=/ --nullObject=true --downstreamFormat=array ../tests/test_files/test5.csv
 Output:
 [
 [,
-{"fname":"Jeff; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"fname":"; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"fname":"null ; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
-{"fname":"Jeff; Zhu; \"90\"; Canada; \"     Ayyy     \"; \"haha\""},,
+{"fname.nickname":"Jeff; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
+{"fname.nickname":"; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
+{"fname.nickname":"null ; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},,
+{"fname.nickname":"Jeff; Zhu; \"90\"; Canada; \"     Ayyy     \"; \"haha\""},,
 ]
 ]
 
