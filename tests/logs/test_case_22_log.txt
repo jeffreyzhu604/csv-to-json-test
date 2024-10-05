@@ -1,0 +1,10 @@
+Test Case 22:
+command
+csvtojson --delimiter='[":"]' --quote=off --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=true --maxRowLength=60 --checkColumn=true --quiet=false --escape=/ --nullObject=false --downstreamFormat=array ../tests/test_files/test_check_col_error22.csv
+Output:
+[
+]
+]
+
+Error:
+No Error Captured

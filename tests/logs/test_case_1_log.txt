@@ -1,12 +1,15 @@
 Test Case 1:
 command
-csvtojson --delimiter='[";"]' --quote=$ --trim=true --ignoreEmpty=true --noheader=false --headers='["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]' --flatKeys=true --checkType=false --maxRowLength=0 --checkColumn=false --quiet=false --escape=/ --nullObject=false --downstreamFormat=line ../tests/test_files/test1.csv
+csvtojson --delimiter='[";"]' --quote=$ --trim=true --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=false --quiet=true --escape=/ --nullObject=true --downstreamFormat=array ../tests/test_files/test1.csv
 Output:
 [
-{"fname":"Jeff","lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
-{"lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
-{"fname":"null","lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
-{"fname":"Jeff","lname":"Zhu","age":"\"90\"","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""}
+[,
+{"field1":"fname","field2":"lname","field3":"age","field4":"countryOfResidence","field5":"slogan.best","field6":"slogan.worst"},,
+{"field1":"Jeff","field2":"Zhu","field3":"90","field4":"Canada","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+{"field2":"Zhu","field3":"90","field4":"Canada","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+{"field1":null,"field2":"Zhu","field3":"90","field4":"Canada","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+{"field1":"Jeff","field2":"Zhu","field3":"\"90\"","field4":"Canada","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+]
 ]
 
 Error:
