@@ -48,8 +48,16 @@ def read_csv(file_path):
     df['headers'] = df['headers'].map(lambda x: command_line_map[x] if x == 'none' else x)
 
     df = df.sort_values(by=["maxRowLength"], ascending=True) 
+    # print(df)
     return df
 
+def fetch_error_file(error_type, test_case_number):
+    if error_type == 'false_no_error':
+        return f"../tests/test_files/test_no_error_{test_case_number}.csv"
+    elif error_type == 'false_checkCol_error':
+        return f"../tests/test_files/test_check_col_error{test_case_number}.csv"
+    else:
+        return f"../tests/test_files/test_max_row_error{test_case_number}.csv"
 
 def execute_command_line_option(params, csv, test_case_number):
 
@@ -70,7 +78,7 @@ def execute_command_line_option(params, csv, test_case_number):
         f"--nullObject={'true' if params['nullObject'] else 'false'} "
         f"--downstreamFormat={params['downstreamFormat']} "
         # f"{csv} > ../tests/expected_output/test{test_case_number}_output.json"
-        f"{csv}"
+        f"{csv if params['quiet'] == 'true' else fetch_error_file(params['quiet'], test_case_number)}"
     )
     
     print(command)
