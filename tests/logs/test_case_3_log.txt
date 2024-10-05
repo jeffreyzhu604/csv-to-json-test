@@ -1,0 +1,14 @@
+Test Case 3:
+command
+csvtojson --delimiter='default' --quote=off --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=true --checkType=false --maxRowLength=0 --checkColumn=false --quiet=false --escape=\ --nullObject=true --downstreamFormat=line ../tests/test_files/test3.csv
+Output:
+[
+{"field1":"fname; lname; age; countryOfResidence; slogan.best; slogan.worst"},
+{"field1":"Jeff; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},
+{"field1":"; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},
+{"field1":"null ; Zhu; 90; Canada; \"     Ayyy     \"; \"haha\""},
+{"field1":"Jeff; Zhu; \"90\"; Canada; \"     Ayyy     \"; \"haha\""}
+]
+
+Error:
+No Error Captured

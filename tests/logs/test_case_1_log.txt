@@ -1,0 +1,13 @@
+Test Case 1:
+command
+csvtojson --delimiter='[";"]' --quote=$ --trim=true --ignoreEmpty=true --noheader=false --headers='["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]' --flatKeys=true --checkType=false --maxRowLength=0 --checkColumn=false --quiet=false --escape=/ --nullObject=false --downstreamFormat=line ../tests/test_files/test1.csv
+Output:
+[
+{"fname":"Jeff","lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
+{"lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
+{"fname":"null","lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
+{"fname":"Jeff","lname":"Zhu","age":"\"90\"","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""}
+]
+
+Error:
+No Error Captured

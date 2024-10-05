@@ -1,0 +1,6 @@
+[
+{"fname":"Jeff","lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
+{"lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
+{"fname":"null","lname":"Zhu","age":"90","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""},
+{"fname":"Jeff","lname":"Zhu","age":"\"90\"","countryOfResidence":"Canada","slogan.best":"\"     Ayyy     \"","slogan.worst":"\"haha\""}
+]
