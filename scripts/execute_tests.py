@@ -54,11 +54,11 @@ def read_csv(file_path):
 
 def fetch_error_file(error_type, test_case_number):
     if error_type == 'false_no_error':
-        return f"../tests/test_files/test_no_error_{test_case_number}.csv"
+        return f"../tests/test_files/test{test_case_number}_no_error.csv"
     elif error_type == 'false_checkCol_error':
-        return f"../tests/test_files/test_check_col_error{test_case_number}.csv"
+        return f"../tests/test_files/test{test_case_number}_check_col_error.csv"
     else:
-        return f"../tests/test_files/test_max_row_error{test_case_number}.csv"
+        return f"../tests/test_files/test{test_case_number}_max_row_error.csv"
 
 def execute_command_line_option(params, csv, test_case_number):
 
