@@ -1,0 +1,8 @@
+Test Case 2:
+command
+csvtojson --delimiter='[":"]' --quote=# --trim=true --ignoreEmpty=true --noheader=false --headers='["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]' --flatKeys=false --checkType=true --maxRowLength=0 --checkColumn=true --quiet=true --escape=default --nullObject=false --downstreamFormat=line ../tests/test_files/test2.csv
+Output:
+[
+
+Error:
+No Error Captured
