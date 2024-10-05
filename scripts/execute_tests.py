@@ -52,8 +52,6 @@ def read_csv(file_path):
 
 
 def execute_command_line_option(params, csv, test_case_number):
-    print('test\n',type(params['maxRowLength'])) 
-    print(command_line_map[str(params['maxRowLength'])])
 
     command = (
         "csvtojson "
