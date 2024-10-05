@@ -1,4 +1,4 @@
-# ACTS Test Suite Generation: Sat Oct 05 10:19:10 PDT 2024
+# ACTS Test Suite Generation: Sat Oct 05 12:05:07 PDT 2024
 #  '*' represents don't care value 
 # Degree of interaction coverage: 2
 # Number of parameters: 14
@@ -17,13 +17,13 @@ dash,off,false,true,false,none,false,60,true,forward_slash,true,array,false_chec
 dash,default_quote,true,false,true,none,false,0,false,back_slash,false,line,false_maxRow_error,true_header_included
 dash,#,true,true,false,fieldname,true,20,true,default_escape,true,array,true,false
 dash,$,false,true,true,none,false,40,true,back_slash,true,array,false_no_error,true_header_included
-default_delim,off,true,false,true,none,false,0,false,back_slash,false,line,false_checkCol_error,true_header_excluded
-default_delim,default_quote,false,true,false,fieldname,true,20,true,forward_slash,true,array,false_maxRow_error,false
+default_delim,off,true,false,true,none,false,0,true,back_slash,false,line,false_checkCol_error,true_header_excluded
+default_delim,default_quote,false,true,false,fieldname,true,20,false,forward_slash,true,array,false_maxRow_error,false
 default_delim,#,false,false,true,none,false,40,false,forward_slash,false,line,true,true_header_included
 default_delim,$,true,false,false,fieldname,false,60,false,default_escape,false,line,false_no_error,false
 exclamation,off,false,true,true,fieldname,true,0,false,forward_slash,true,array,true,false
 exclamation,default_quote,true,false,false,none,false,20,true,default_escape,false,line,false_no_error,true_header_included
-exclamation,#,true,true,true,none,false,40,false,back_slash,false,line,false_checkCol_error,true_header_excluded
+exclamation,#,true,true,true,none,false,40,true,back_slash,true,array,false_checkCol_error,true_header_excluded
 exclamation,$,true,true,true,none,false,60,true,default_escape,true,array,false_maxRow_error,true_header_excluded
 colon,off,false,true,true,none,false,60,true,forward_slash,false,array,false_checkCol_error,true_header_included
 semicolon,#,false,false,false,none,false,20,true,default_escape,false,line,false_no_error,true_header_excluded
