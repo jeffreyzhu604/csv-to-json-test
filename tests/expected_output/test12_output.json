@@ -1,13 +1,4 @@
+unknown parameter ../tests/test_files/test12_no_error.csv.
 [
-{"field1":"fname.nickname; lname; age; countryOfResidence.city.town; slogan.best; slogan.worst"},
-{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
-{"field1":"HoJun; Lee; 26; Lougheed; \"Life's good\"; \"wompwomp\""},
-{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"ha;ha\""},
-{"field1":"HoJun; Lee; 26; Lougheed; $Life;s good$; \"wompwomp\""},
-{"field1":"; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
-{"field1":"HoJun;; 26; Lougheed; \"Life's good\"; \"wompwomp\""},
-{"field1":"Jeff; Zhu; 90; Lougheed; \"     Ayyy     \"; \"haha\""},
-{"field1":"HoJun; Zhu; 90; Lougheed; \"     Life's good     \"; \"wompwomp\""},
-{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
-{"field1":"HoJun; Lee; 26; Lougheed; \"/\"Life's good/\"\"; \"wompwomp\""}
+]
 ]
