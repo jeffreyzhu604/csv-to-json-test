@@ -2,9 +2,17 @@ Test Case 14:
 command
 csvtojson --delimiter='["-"]' --quote=$ --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=true --maxRowLength=40 --checkColumn=false --quiet=false --escape=/ --nullObject=false --downstreamFormat=line ../tests/test_files/test14_max_row_error.csv
 Output:
-unknown parameter ../tests/test_files/test14_max_row_error.csv.
 [
-
+{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
+{"field1":"HoJun; Lee; 26; Lougheed; \"Life's good\"; \"wompwomp\""},
+{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"ha;ha\""},
+{"field1":"HoJun; Lee; 26; Lougheed; $Life;s good$; \"wompwomp\""},
+{"field1":"; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
+{"field1":"HoJun;; 26; Lougheed; \"Life's good\"; \"wompwomp\""},
+{"field1":"Jeff; Zhu; 90; Lougheed; \"     Ayyy     \"; \"haha\""},
+{"field1":"HoJun; Zhu; 90; Lougheed; \"     Life's good     \"; \"wompwomp\""},
+{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
+{"field1":"HoJun; Lee; 26; Lougheed; \"/\"Life's good/\"\"; \"wompwomp\""}
 ]
 
 Error:

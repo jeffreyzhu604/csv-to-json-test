@@ -1,11 +1,29 @@
 Test Case 6:
 command
-csvtojson --delimiter='[":"]' --quote=off --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=true --quiet=false --escape=/ --nullObject=false --downstreamFormat=line ../tests/test_files/test6_no_error.csv
+csvtojson --delimiter='["!"]' --quote=off --trim=true --ignoreEmpty=false --noheader=false --headers='["fname.nickname","lname","age","countryOfResidence.city.town","slogan.best","slogan.worst"]' --flatKeys=true --checkType=true --maxRowLength=0 --checkColumn=true --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/test6_check_col_error.csv
 Output:
-unknown parameter ../tests/test_files/test6_no_error.csv.
 [
 
-]
-
 Error:
-No Error Captured
+csvtojson got an error:  Error [CSV Parse Error]: Error: column_mismatched. JSON Line number: 2
+    at new CSVError (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/v2/CSVError.js:16:28)
+    at CSVError.column_mismatched (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/v2/CSVError.js:24:16)
+    at processRow (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/v2/lineToJson.js:23:35)
+    at Object.default_1 [as default] (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/v2/lineToJson.js:12:17)
+    at ProcessorLocal.processCSVBody (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/v2/ProcessorLocal.js:247:44)
+    at ProcessorLocal.processDataWithHead (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/v2/ProcessorLocal.js:193:21)
+    at /home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/v2/ProcessorLocal.js:140:34
+    at tryCatcher (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/node_modules/bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/node_modules/bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromiseCtx (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/node_modules/bluebird/js/release/promise.js:641:10)
+    at _drainQueueStep (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:97:12)
+    at _drainQueue (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:102:5)
+    at Async.drainQueues [as _onImmediate] (/home/pisache/.nvm/versions/node/v22.9.0/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:15:14)
+    at process.processImmediate (node:internal/timers:491:21) {
+  err: 'column_mismatched',
+  line: 2,
+  extra: undefined
+}
+

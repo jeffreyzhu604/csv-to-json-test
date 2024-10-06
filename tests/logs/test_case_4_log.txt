@@ -1,18 +1,20 @@
 Test Case 4:
 command
-csvtojson --delimiter='["-"]'  --trim=true --ignoreEmpty=true --noheader=false --headers='["fname.nickname","lname","age","countryOfResidence.city.town","slogan.best","slogan.worst"]' --flatKeys=true --checkType=false --maxRowLength=0 --checkColumn=false --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/test4_no_error.csv
+csvtojson --delimiter='["-"]'  --trim=false --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=true --maxRowLength=0 --checkColumn=false --quiet=false --escape=\ --nullObject=true --downstreamFormat=array ../tests/test_files/test4_no_error.csv
 Output:
 [
-{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"},
-{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life","slogan.worst":"s good#","field7":"#wompwomp#"},
-{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"},
-{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Lougheed","slogan.best":"#     Ayyy     #","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"Zhu","age":"90","countryOfResidence.city.town":"Lougheed","slogan.best":"#     Life's good     #","slogan.worst":"#wompwomp#"},
-{"fname.nickname":"null","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"null","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"}
+[,
+{"field1":"Jeff","field2":" Zhu","field3":90,"field4":" Vancouver","field5":" \"Ayyy\"","field6":" \"haha\""},,
+{"field1":"HoJun","field2":" Lee","field3":26,"field4":" Lougheed","field5":" \"Life's good\"","field6":" \"wompwomp\""},,
+{"field1":"Jeff","field2":" Zhu","field3":90,"field4":" Vancouver","field5":" \"Ay","field6":"yy\"","field7":" \"ha","field8":"ha\""},,
+{"field1":"HoJun","field2":" Lee","field3":26,"field4":" Lougheed","field5":" \"Life","field6":"s good\"","field7":" 'womp","field8":"womp'"},,
+{"field1":"Jeff","field2":" Zhu","field3":" \"90\"","field4":" Vancouver","field5":" \"Ayyy\"","field6":" \"haha\""},,
+{"field1":"HoJun","field2":"","field3":" \"26\"","field4":" Lougheed","field5":" \"Life's good\"","field6":" \"wompwomp\""},,
+{"field1":"","field2":" Zhu","field3":90,"field4":" Lougheed","field5":" \"     Ayyy     \"","field6":" \"haha\""},,
+{"field1":"HoJun","field2":"","field3":26,"field4":" Lougheed","field5":" \"     Life's good     \"","field6":" \"wompwomp\""},,
+{"field1":"Jeff","field2":" Zhu","field3":90,"field4":" Vancouver","field5":" \"Ayyy\"","field6":" \"haha\""},,
+{"field1":"HoJun","field2":" Lee","field3":26,"field4":" Lougheed","field5":" \"/\"Life's good/\"\"","field6":" \"wompwomp\""},,
+]
 ]
 
 Error:

@@ -1,9 +1,19 @@
 Test Case 7:
 command
-csvtojson --delimiter='["!"]' --quote=off --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=true --maxRowLength=0 --checkColumn=true --quiet=false --escape=\ --nullObject=true --downstreamFormat=line ../tests/test_files/test7_check_col_error.csv
+csvtojson --delimiter='["-"]' --quote=# --trim=true --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=true --maxRowLength=20 --checkColumn=false --quiet=true --escape=default --nullObject=true --downstreamFormat=line ../tests/test_files/test7.csv
 Output:
 [
-
+{"field1":"fname","field2":"lname","field3":"age"},
+{"field1":"Jeff","field2":"Zhu","field3":90,"field4":"Vancouver","field5":"Ayyy","field6":"haha"},
+{"field1":"HoJun","field2":"Lee","field3":26,"field4":"Lougheed","field5":"Life's good","field6":"wompwomp"},
+{"field1":"Jeff","field2":"Zhu","field3":90,"field4":"Vancouver","field5":"Ay-yy","field6":"haha"},
+{"field1":"HoJun","field2":"Lee","field3":26,"field4":"Lougheed","field5":"Life-s good","field6":"\"womp","field7":"womp\""},
+{"field1":"Jeff","field2":"Zhu","field3":90,"field4":"Vancouver","field5":"Ayyy","field6":"haha"},
+{"field1":"HoJun","field2":"Lee","field3":26,"field4":"Lougheed","field5":"Life's good","field6":"wompwomp"},
+{"field2":"Zhu","field3":90,"field4":"Lougheed","field5":"     Ayyy     ","field6":"haha"},
+{"field1":"HoJun","field3":26,"field4":"Lougheed","field5":"     Life's good     ","field6":"wompwomp"},
+{"field1":null,"field2":"Zhu","field3":90,"field4":"Vancouver","field5":"Ayyy","field6":"haha"},
+{"field1":"HoJun","field2":null,"field3":26,"field4":"Lougheed","field5":"Life's good","field6":"wompwomp"}
 ]
 
 Error:

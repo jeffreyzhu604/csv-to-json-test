@@ -1,8 +1,19 @@
 Test Case 23:
 command
-csvtojson --delimiter='["!"]' --quote=$ --trim=true --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=true --maxRowLength=60 --checkColumn=true --quiet=false --escape=\ --nullObject=false --downstreamFormat=array ../tests/test_files/test23_no_error.csv
+csvtojson --delimiter='["!"]' --quote=$ --trim=true --ignoreEmpty=true --noheader=false --headers='["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]' --flatKeys=true --checkType=true --maxRowLength=60 --checkColumn=false --quiet=false --escape=default --nullObject=false --downstreamFormat=array ../tests/test_files/test23_no_error.csv
 Output:
 [
+[,
+{"fname":"Jeff","lname":"Zhu","age":90,"countryOfResidence":"Vancouver","slogan.best":"Ayyy","slogan.worst":"haha"},,
+{"fname":"HoJun","lname":"Lee","age":26,"countryOfResidence":"Lougheed","slogan.best":"Life's good","slogan.worst":"wompwomp"},,
+{"fname":"Jeff","lname":"Zhu","age":90,"countryOfResidence":"Vancouver","slogan.best":"Ay!yy","slogan.worst":"haha"},,
+{"fname":"HoJun","lname":"Lee","age":26,"countryOfResidence":"Lougheed","slogan.best":"Life!s good","slogan.worst":"womp!womp"},,
+{"fname":"Jeff","lname":"Zhu","age":90,"countryOfResidence":"Vancouver","slogan.best":"Ayyy","slogan.worst":"haha"},,
+{"fname":"HoJun","lname":"Lee","age":26,"countryOfResidence":"Lougheed","slogan.best":"Life's good","slogan.worst":"wompwomp"},,
+{"fname":"Jeff","lname":"Zhu","age":90,"countryOfResidence":"Lougheed","slogan.best":"     Ayyy     ","slogan.worst":"haha"},,
+{"fname":"HoJun","lname":"Lee","age":26,"countryOfResidence":"Lougheed","slogan.best":"     Life's good     ","slogan.worst":"wompwomp"},,
+{"fname":"null","lname":"Zhu","age":90,"countryOfResidence":"Vancouver","slogan.best":"Ayyy","slogan.worst":"haha"},,
+{"fname":"HoJun","lname":"null","age":26,"countryOfResidence":"Lougheed","slogan.best":"Life's good","slogan.worst":"wompwomp"},,
 ]
 ]
 
