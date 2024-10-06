@@ -60,6 +60,13 @@ def fetch_error_file(error_type, test_case_number):
     else:
         return f"../tests/test_files/test{test_case_number}_max_row_error.csv"
 
+def select_delimiter(param):
+    if param == 'default':
+        return ''
+    else:
+        return f"--delimiter=\'{param}\' "
+
+
 def execute_command_line_option(params, csv, test_case_number):
 
     csv = csv if params['quiet'] == 'true' else fetch_error_file(params['quiet'], test_case_number)
@@ -71,10 +78,12 @@ def execute_command_line_option(params, csv, test_case_number):
         temp_csv = f"../tests/test_files/temp_test{test_case_number}.csv"
         with open(temp_csv, 'w') as temp_file:
             temp_file.writelines(data)
+        
+        csv = temp_csv
 
     command = (
         "csvtojson "
-        f"--delimiter=\'{params['delimiter']}\' "
+        f"{select_delimiter(params['delimiter'])}"
         f"{'--quote=' + params['quote'] if params['quote'] != 'default' else ''} "  
         f"--trim={'true' if params['trim'] else 'false'} "
         f"--ignoreEmpty={'true' if params['ignoreEmpty'] else 'false'} "
@@ -85,7 +94,7 @@ def execute_command_line_option(params, csv, test_case_number):
         f"--maxRowLength={params['maxRowLength']} "
         f"--checkColumn={'true' if params['checkColumn'] else 'false'} "
         f"--quiet={'true' if params['quiet'] == 'true' else 'false'} "
-        f"--escape={params['escape']} "
+        f"{'--escape=' + params['escape'] if params['escape'] != 'default_escape' else ''} "
         f"--nullObject={'true' if params['nullObject'] else 'false'} "
         f"--downstreamFormat={params['downstreamFormat']} "
         # f"{csv} > ../tests/expected_output/test{test_case_number}_output.json"
