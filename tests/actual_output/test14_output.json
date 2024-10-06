@@ -1,0 +1,12 @@
+[
+{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
+{"field1":"HoJun; Lee; 26; Lougheed; \"Life's good\"; \"wompwomp\""},
+{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"ha;ha\""},
+{"field1":"HoJun; Lee; 26; Lougheed; $Life;s good$; \"wompwomp\""},
+{"field1":"; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
+{"field1":"HoJun;; 26; Lougheed; \"Life's good\"; \"wompwomp\""},
+{"field1":"Jeff; Zhu; 90; Lougheed; \"     Ayyy     \"; \"haha\""},
+{"field1":"HoJun; Zhu; 90; Lougheed; \"     Life's good     \"; \"wompwomp\""},
+{"field1":"Jeff; Zhu; 90; Vancouver; \"Ayyy\"; \"haha\""},
+{"field1":"HoJun; Lee; 26; Lougheed; \"/\"Life's good/\"\"; \"wompwomp\""}
+]
