@@ -12,8 +12,8 @@ Output:
 {"fname":{"nickname":"HoJun"},"age":"26","countryOfResidence":{"city":{"town":"Lougheed"}},"slogan":{"best":"Life's good","worst":"wompwomp"}},,
 {"lname":"Zhu","age":"90","countryOfResidence":{"city":{"town":"Lougheed"}},"slogan":{"best":"     Ayyy     ","worst":"haha"}},,
 {"fname":{"nickname":"HoJun"},"age":"26","countryOfResidence":{"city":{"town":"Lougheed"}},"slogan":{"best":"     Life's good     ","worst":"wompwomp"}},,
-{"fname":{"nickname":"Jeff"},"lname":"Zhu","age":"90","countryOfResidence":{"city":{"town":"Vancouver"}},"slogan":{"best":"Ayyy","worst":"haha"}},,
-{"fname":{"nickname":"HoJun"},"lname":"Lee","age":"26","countryOfResidence":{"city":{"town":"Lougheed"}},"slogan":{"best":"$Life's good$","worst":"wompwomp"}},,
+{"fname":{"nickname":"null"},"lname":"Zhu","age":"90","countryOfResidence":{"city":{"town":"Vancouver"}},"slogan":{"best":"Ayyy","worst":"haha"}},,
+{"fname":{"nickname":"HoJun"},"lname":"null","age":"26","countryOfResidence":{"city":{"town":"Lougheed"}},"slogan":{"best":"$Life's good$","worst":"wompwomp"}},,
 ]
 ]
 
