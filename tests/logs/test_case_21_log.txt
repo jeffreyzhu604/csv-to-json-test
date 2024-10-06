@@ -4,17 +4,9 @@ csvtojson --quote=$ --trim=false --ignoreEmpty=false --noheader=true  --flatKeys
 Output:
 [
 [,
-{"field1":"fname","field2":" lname","field3":" age","field4":" countryOfResidence","field5":" slogan.best","field6":" slogan.worst"},,
-{"field1":"Jeff","field2":" Zhu","field3":" \"90\"","field4":" Vancouver","field5":" $ Ayyy $","field6":" $ haha $"},,
-{"field1":"HoJun","field2":" Lee","field3":" 26","field4":" Lougheed","field5":" $Life's good$","field6":" $w$"},,
-{"field1":"Jeff","field2":" Zhu","field3":" 90","field4":" Vancouver","field5":" $Ayyy$","field6":" $ha","field7":"ha$"},,
-{"field1":"HoJun","field2":" Lee","field3":" 26","field4":" Lougheed","field5":" $Life","field6":"s good$","field7":" $w$"},,
-{"field1":"s","field2":" Zhu","field3":" 90","field4":" Vancouver","field5":" $Ayyy$","field6":" $haha$"},,
-{"field1":"HoJun","field2":"","field3":" 26","field4":" Lougheed","field5":" $Life's good$","field6":" $omp$"},,
-{"field1":"Jeff","field2":" Zhu","field3":" 90","field4":" Lougheed","field5":" $     Ayyy     $","field6":" $haha$"},,
-{"field1":"HoJun","field2":" Zhu","field3":" 90","field4":" Lougheed","field5":" $  L's     $","field6":" $wompwomp$"},,
-{"field1":"Jeff","field2":" Zhu","field3":" 90","field4":" Vancouver","field5":" $Ayyy$","field6":" $haha$"},,
-{"field1":"HoJun","field2":" Lee","field3":" 26","field4":" Ld","field5":" $/$Life's good/$$","field6":" $wompwomp$"},,
+{"field1":"fname","field2":"lname","field3":"age","field4":"countryOfResidences","field5":"slogan.best","field6":"slogan.worst"},,
+{"field1":"jeff","field2":"zhu","field3":"90","field4":"canada","field5":" ,whats good $ , $ whats, bad"},,
+{"field1":"","field2":"zhu","field3":"90","field4":"canada","field5":null,"field6":" $ whats bad $"},,
 ]
 ]
 

@@ -3,7 +3,8 @@ command
 csvtojson --delimiter='[";"]' --quote=# --trim=false --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=true --maxRowLength=60 --checkColumn=false --quiet=false --escape=\ --nullObject=true --downstreamFormat=line ../tests/test_files/test19_max_row_error.csv
 Output:
 [
-
+{"field1":"jeff","field2":"zhu","field3":90,"field4":"canada","field5":" whats; good \"","field6":" whats badbadbadbadbadbad"},
+{"field1":"","field2":"zhu","field3":"null","field4":90,"field5":"canada","field6":"null","field7":" whats bad "}
 ]
 
 Error:

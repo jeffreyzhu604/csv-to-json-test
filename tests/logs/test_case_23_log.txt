@@ -4,8 +4,8 @@ csvtojson --delimiter='["!"]' --quote=$ --trim=true --ignoreEmpty=true --noheade
 Output:
 [
 [,
-{"fname":"jeff","lname":"zhu","age":"\"90\"","countryOfResidences":"canada","slogan.best":" whats good ","slogan.worst":" whats badasaasasasas "},,
-{"lname":"zhu","age":90,"countryOfResidences":"canada","slogan.best":"null","slogan.worst":" \"whats bad\" "},,
+{"fname":"jeff","lname":"zhu","age":"\"90\"","countryOfResidences":"canada","slogan.best":" \"whats good!\" $","slogan.worst":" whats bad"},,
+{"lname":"zhu","age":90,"countryOfResidences":"canada","slogan.best":"null","slogan.worst":" whats bad "},,
 ]
 ]
 
