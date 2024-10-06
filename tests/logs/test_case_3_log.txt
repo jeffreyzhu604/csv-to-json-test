@@ -1,6 +1,6 @@
 Test Case 3:
 command
-csvtojson --quote=off --trim=true --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=false --quiet=true --escape=\ --nullObject=true --downstreamFormat=array ../tests/test_files/temp_test3.csv
+csvtojson --quote=off --trim=true --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=false --quiet=true --escape=\ --nullObject=true --downstreamFormat=array ../tests/test_files/temp_test3.csv
 Output:
 [
 [,
@@ -10,7 +10,7 @@ Output:
 {"field1":"HoJun","field2":"Lee","field3":"26","field4":"Lougheed","field5":"\"Life","field6":"s good\"","field7":"\"wompwomp\""},,
 {"field1":"Jeff","field2":"Zhu","field3":"90","field4":"Vancouver","field5":"\"Ayyy\"","field6":"\"haha\""},,
 {"field1":"HoJun","field2":"Lee","field3":"26","field4":"Lougheed","field5":"\"Life's good\"","field6":"\"wompwomp\""},,
-{"field2":"Zhu","field3":"90","field4":"Lougheed","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
+{"field1":"","field2":"Zhu","field3":"90","field4":"Lougheed","field5":"\"     Ayyy     \"","field6":"\"haha\""},,
 {"field1":"HoJun","field2":"Zhu","field3":"90","field4":"Lougheed","field5":"\"     Life's good     \"","field6":"\"wompwomp\""},,
 {"field1":"null","field2":"Zhu","field3":"90","field4":"Vancouver","field5":"\"Ayyy\"","field6":"\"haha\""},,
 {"field1":"HoJun","field2":"null","field3":"26","field4":"Lougheed","field5":"\"Life's good\"","field6":"\"wompwomp\""},,

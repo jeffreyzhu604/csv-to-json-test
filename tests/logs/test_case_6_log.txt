@@ -1,8 +1,8 @@
 Test Case 6:
 command
-csvtojson --delimiter='[":"]' --quote=off --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=true --quiet=false --escape=/ --nullObject=false --downstreamFormat=line ../tests/test_files/test6_no_error.csv
+csvtojson --delimiter='["!"]' --quote=off --trim=true --ignoreEmpty=false --noheader=false --headers='["fname.nickname","lname","age","countryOfResidences.city.town","slogan.best","slogan.worst"]' --flatKeys=true --checkType=true --maxRowLength=0 --checkColumn=true --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/test6_check_col_error.csv
 Output:
-unknown parameter ../tests/test_files/test6_no_error.csv.
+unknown parameter ../tests/test_files/test6_check_col_error.csv.
 Please specify csv file path or pipe the csv data through.
 
 csvtojson: Convert csv to JSON format

@@ -1,6 +1,6 @@
 Test Case 13:
 command
-csvtojson --quote=# --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=40 --checkColumn=false --quiet=false --escape=default --nullObject=false --downstreamFormat=array ../tests/test_files/test13_no_error.csv
+csvtojson --quote=# --trim=false --ignoreEmpty=true --noheader=false --headers='["fname","lname","age","countryOfResidences"]' --flatKeys=true --checkType=true --maxRowLength=40 --checkColumn=true --quiet=false --escape=default --nullObject=true --downstreamFormat=array ../tests/test_files/test13_no_error.csv
 Output:
 unknown parameter ../tests/test_files/test13_no_error.csv.
 Please specify csv file path or pipe the csv data through.

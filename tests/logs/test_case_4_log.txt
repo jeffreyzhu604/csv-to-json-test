@@ -1,17 +1,9 @@
 Test Case 4:
 command
-csvtojson --delimiter='["-"]'  --trim=true --ignoreEmpty=true --noheader=false --headers='["fname.nickname","lname","age","countryOfResidence.city.town","slogan.best","slogan.worst"]' --flatKeys=true --checkType=false --maxRowLength=0 --checkColumn=false --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/temp_test4.csv
+csvtojson --delimiter='["-"]'  --trim=false --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=true --maxRowLength=0 --checkColumn=false --quiet=false --escape=\ --nullObject=true --downstreamFormat=array ../tests/test_files/test4_no_error.csv
 Output:
 [
-{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"},
-{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life","slogan.worst":"s good#","field7":"#wompwomp#"},
-{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"Lee","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"},
-{"fname.nickname":"Jeff","lname":"Zhu","age":"90","countryOfResidence.city.town":"Lougheed","slogan.best":"#     Ayyy     #","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"Zhu","age":"90","countryOfResidence.city.town":"Lougheed","slogan.best":"#     Life's good     #","slogan.worst":"#wompwomp#"},
-{"fname.nickname":"null","lname":"Zhu","age":"90","countryOfResidence.city.town":"Vancouver","slogan.best":"#Ayyy#","slogan.worst":"#haha#"},
-{"fname.nickname":"HoJun","lname":"null","age":"26","countryOfResidence.city.town":"Lougheed","slogan.best":"#Life's good#","slogan.worst":"#wompwomp#"}
+]
 ]
 
 Error:

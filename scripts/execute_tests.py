@@ -10,9 +10,9 @@ command_line_map = {
     'colon' : '[\":\"]',
 
     '20' : '\'["fname","lname","age"]\'',
-    '40' : '\'["fname","lname","age","countryOfResidence"]\'',
-    '60' : '\'["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]\'',
-    '0' : '\'["fname.nickname","lname","age","countryOfResidence.city.town","slogan.best","slogan.worst"]\'',
+    '40' : '\'["fname","lname","age","countryOfResidences"]\'',
+    '60' : '\'["fname","lname","age","countryOfResidences","slogan.best","slogan.worst"]\'',
+    '0' : '\'["fname.nickname","lname","age","countryOfResidences.city.town","slogan.best","slogan.worst"]\'',
 
     'default_quote': 'default',
     'off' : 'off',
@@ -83,7 +83,7 @@ def execute_command_line_option(params, csv, test_case_number):
         elif error_type == 'false_maxRow_error':
             temp_csv = f"../tests/test_files/test{test_case_number}_max_row_error.csv"
         else:
-            temp_csv = f"../tests/test_files/temp_test{test_case_number}.csv"
+            temp_csv = f"../tests/test_files/temp/temp_test{test_case_number}.csv"
         with open(temp_csv, 'w') as temp_file:
             temp_file.writelines(data)
         csv = temp_csv        

@@ -1,29 +1,13 @@
 Test Case 23:
 command
-csvtojson --delimiter='["!"]' --quote=$ --trim=true --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=true --maxRowLength=60 --checkColumn=true --quiet=false --escape=\ --nullObject=false --downstreamFormat=array ../tests/test_files/temp_test23.csv
+csvtojson --delimiter='["!"]' --quote=$ --trim=true --ignoreEmpty=true --noheader=false --headers='["fname","lname","age","countryOfResidences","slogan.best","slogan.worst"]' --flatKeys=true --checkType=true --maxRowLength=60 --checkColumn=false --quiet=false --escape=default --nullObject=false --downstreamFormat=array ../tests/test_files/test23_no_error.csv
 Output:
 [
+[,
+{"fname":"jeff","lname":"zhu","age":"\"90\"","countryOfResidences":"canada","slogan.best":" whats good ","slogan.worst":" whats badasaasasasas "},,
+{"lname":"zhu","age":90,"countryOfResidences":"canada","slogan.best":"null","slogan.worst":" \"whats bad\" "},,
+]
+]
 
 Error:
-csvtojson got an error:  Error [CSV Parse Error]: Error: column_mismatched. JSON Line number: 0
-    at new CSVError (/usr/local/lib/node_modules/csvtojson/v2/CSVError.js:16:28)
-    at CSVError.column_mismatched (/usr/local/lib/node_modules/csvtojson/v2/CSVError.js:24:16)
-    at processRow (/usr/local/lib/node_modules/csvtojson/v2/lineToJson.js:23:35)
-    at Object.default_1 [as default] (/usr/local/lib/node_modules/csvtojson/v2/lineToJson.js:12:17)
-    at ProcessorLocal.processCSVBody (/usr/local/lib/node_modules/csvtojson/v2/ProcessorLocal.js:247:44)
-    at ProcessorLocal.processDataWithHead (/usr/local/lib/node_modules/csvtojson/v2/ProcessorLocal.js:193:21)
-    at /usr/local/lib/node_modules/csvtojson/v2/ProcessorLocal.js:140:34
-    at tryCatcher (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/util.js:16:23)
-    at Promise._settlePromiseFromHandler (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/promise.js:547:31)
-    at Promise._settlePromise (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/promise.js:604:18)
-    at Promise._settlePromiseCtx (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/promise.js:641:10)
-    at _drainQueueStep (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:97:12)
-    at _drainQueue (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:86:9)
-    at Async._drainQueues (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:102:5)
-    at Async.drainQueues [as _onImmediate] (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:15:14)
-    at process.processImmediate (node:internal/timers:491:21) {
-  err: 'column_mismatched',
-  line: 0,
-  extra: undefined
-}
-
+No Error Captured

@@ -1,6 +1,6 @@
 Test Case 11:
 command
-csvtojson --delimiter='[":"]' --quote=$ --trim=true --ignoreEmpty=true --noheader=false --headers='["fname","lname","age"]' --flatKeys=true --checkType=false --maxRowLength=20 --checkColumn=true --quiet=false --escape=\ --nullObject=false --downstreamFormat=line ../tests/test_files/temp_test11.csv
+csvtojson --delimiter='[":"]' --quote=$ --trim=false --ignoreEmpty=false --noheader=false --headers='["fname","lname","age"]' --flatKeys=true --checkType=true --maxRowLength=20 --checkColumn=true --quiet=false --escape=\ --nullObject=false --downstreamFormat=array ../tests/test_files/test11_check_col_error.csv
 Output:
 [
 
