@@ -3,6 +3,10 @@ command
 csvtojson --delimiter='[":"]' --quote=off --trim=true --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=false --maxRowLength=40 --checkColumn=false --quiet=false --escape=default --nullObject=true --downstreamFormat=array ../tests/test_files/test16_max_row_error.csv
 Output:
 [
+[,
+{"field1":"fname","field2":"lname","field3":"age","field4":"countryOfResidences"},,
+{"field1":"jeff","field2":"zhu","field3":"90","field4":"\\\"canada     zxxxdsdsdsdsdsdsddsdsdxxxxxxxxxx"},,
+{"field1":"hojun","field2":"","field3":"\"26\"","field4":"korea"},,
 ]
 ]
 

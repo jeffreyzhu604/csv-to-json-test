@@ -1,6 +1,0 @@
-[
-{"field1":"fname","field2":"lname","field3":"age","field4":"countryOfResidences","field5":"slogan.best","field6":"slogan.worst"},
-{"field1":"jeff","field2":"zhu","field3":"90","field4":"canada","field5":"$ ,\"whats good\" $" , "field6":"$ whats, bad$"},
-{"field1":"","field2":"zhu","field3":"90","field4":"canada","field5":null,"field6":" $ whats bad $"}
-]
-    

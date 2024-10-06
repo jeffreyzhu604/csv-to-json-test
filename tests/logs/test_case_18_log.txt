@@ -6,7 +6,7 @@ Output:
 [,
 {"field1":"fname","field2":"strength","field3":"slogan.best","field4":"slogan.worst"},,
 {"field1":"jeff","field2":100,"field3":" \"whats! good\"","field4":" wh  adbad "},,
-{"field2":"zhu","field3":50,"field4":" whats bad "},,
+{"field2":50,"field3":" whats bad ","field4":"h"},,
 ]
 ]
 

@@ -3,6 +3,9 @@ command
 csvtojson --delimiter='[":"]' --quote=# --trim=false --ignoreEmpty=false --noheader=false --headers='["fname","lname","age","countryOfResidences"]' --flatKeys=true --checkType=true --maxRowLength=40 --checkColumn=true --quiet=true --escape=\ --nullObject=true --downstreamFormat=array ../tests/test_files/test17.csv
 Output:
 [
+[,
+{"fname":"jeff","lname":"zhu","age":90,"countryOfResidences":"          \\\\canada     "},,
+{"fname":"hojun","lname":"","age":"\"26\"","countryOfResidences":"korea"},,
 ]
 ]
 

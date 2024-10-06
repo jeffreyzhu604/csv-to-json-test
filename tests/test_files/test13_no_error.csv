@@ -1,11 +1,3 @@
-Jeff; Zhu; 90; Vancouver; "Ayyy"; "haha"
-HoJun; Lee; 26; Lougheed; "Life's good"; "wompwomp"
-Jeff; Zhu; 90; Vancouver; "Ayyy"; "ha;ha"
-HoJun; Lee; 26; Lougheed; $Life;s good$; "wompwomp"
-; Zhu; 90; Vancouver; "Ayyy"; "haha"
-HoJun;; 26; Lougheed; "Life's good"; "wompwomp"
-Jeff; Zhu; 90; Lougheed; "     Ayyy     "; "haha"
-HoJun; Zhu; 90; Lougheed; "     Life's good     "; "wompwomp"
-Jeff; Zhu; 90; Vancouver; "Ayyy"; "haha"
-HoJun; Lee; 26; Lougheed; "/"Life's good/""; "wompwomp"
-
+fname,lname,age,countryOfResidences
+jeff,zhu,90,#          "canada #
+hojun,,"26",#korea#
