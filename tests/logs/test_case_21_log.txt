@@ -1,11 +1,11 @@
 Test Case 21:
 command
-csvtojson --delimiter='default' --quote=$ --trim=true --ignoreEmpty=false --noheader=false --headers='["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]' --flatKeys=false --checkType=false --maxRowLength=60 --checkColumn=true --quiet=false --escape=default --nullObject=true --downstreamFormat=line ../tests/test_files/test21_no_error.csv
+csvtojson --quote=$ --trim=true --ignoreEmpty=false --noheader=false --headers='["fname","lname","age","countryOfResidence","slogan.best","slogan.worst"]' --flatKeys=false --checkType=false --maxRowLength=60 --checkColumn=true --quiet=false --escape=default --nullObject=true --downstreamFormat=line ../tests/test_files/temp_test21.csv
 Output:
 [
 
 Error:
-csvtojson got an error:  Error [CSV Parse Error]: Error: column_mismatched. JSON Line number: 0
+csvtojson got an error:  Error [CSV Parse Error]: Error: column_mismatched. JSON Line number: 9
     at new CSVError (/usr/local/lib/node_modules/csvtojson/v2/CSVError.js:16:28)
     at CSVError.column_mismatched (/usr/local/lib/node_modules/csvtojson/v2/CSVError.js:24:16)
     at processRow (/usr/local/lib/node_modules/csvtojson/v2/lineToJson.js:23:35)
@@ -23,7 +23,7 @@ csvtojson got an error:  Error [CSV Parse Error]: Error: column_mismatched. JSON
     at Async.drainQueues [as _onImmediate] (/usr/local/lib/node_modules/csvtojson/node_modules/bluebird/js/release/async.js:15:14)
     at process.processImmediate (node:internal/timers:491:21) {
   err: 'column_mismatched',
-  line: 0,
+  line: 9,
   extra: undefined
 }
 

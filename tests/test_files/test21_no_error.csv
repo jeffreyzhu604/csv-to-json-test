@@ -1,11 +1,12 @@
-Jeff; Zhu; 90; Vancouver; "Ayyy"; "haha"
-HoJun; Lee; 26; Lougheed; "Life's good"; "wompwomp"
-Jeff; Zhu; 90; Vancouver; "Ayyy"; "ha;ha"
-HoJun; Lee; 26; Lougheed; $Life;s good$; "wompwomp"
-; Zhu; 90; Vancouver; "Ayyy"; "haha"
-HoJun;; 26; Lougheed; "Life's good"; "wompwomp"
-Jeff; Zhu; 90; Lougheed; "     Ayyy     "; "haha"
-HoJun; Zhu; 90; Lougheed; "     Life's good     "; "wompwomp"
-Jeff; Zhu; 90; Vancouver; "Ayyy"; "haha"
-HoJun; Lee; 26; Lougheed; "/"Life's good/""; "wompwomp"
+fname, lname, age, countryOfResidence, slogan.best, slogan.worst
+Jeff, Zhu, "90", Vancouver, $ Ayyy $, $ haha $
+HoJun, Lee, 26, Lougheed, $Life's good$, $w$
+Jeff, Zhu, 90, Vancouver, $Ayyy$, $ha,ha$
+HoJun, Lee, 26, Lougheed, $Life,s good$, $w$
+s, Zhu, 90, Vancouver, $Ayyy$, $haha$
+HoJun,, 26, Lougheed, $Life's good$, $omp$
+Jeff, Zhu, 90, Lougheed, $     Ayyy     $, $haha$
+HoJun, Zhu, 90, Lougheed, $  L's     $, $wompwomp$
+Jeff, Zhu, 90, Vancouver, $Ayyy$, $haha$
+HoJun, Lee, 26, Ld, $/$Life's good/$$, $wompwomp$
 
