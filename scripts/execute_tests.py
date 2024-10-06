@@ -107,7 +107,6 @@ def execute_command_line_option(params, csv, test_case_number):
         f"{'--escape=' + params['escape'] if params['escape'] != 'default_escape' else ''} "
         f"--nullObject={'true' if params['nullObject'] else 'false'} "
         f"--downstreamFormat={params['downstreamFormat']} "
-        # f"{csv} > ../tests/expected_output/test{test_case_number}_output.json"
         f"{csv}"
     )
     
