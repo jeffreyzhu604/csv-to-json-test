@@ -1,4 +1,4 @@
-# ACTS Test Suite Generation: Sat Oct 05 13:30:18 PDT 2024
+# ACTS Test Suite Generation: Sat Oct 05 17:59:05 PDT 2024
 #  '*' represents don't care value 
 # Degree of interaction coverage: 2
 # Number of parameters: 14
@@ -6,25 +6,25 @@
 # Number of configurations: 23
 delimiter,quote,trim,checkType,ignoreEmpty,headers,flatKeys,maxRowLength,checkColumn,escape,nullObject,downstreamFormat,quiet,noheader
 semicolon,off,false,false,false,none,false,20,false,forward_slash,false,array,false_no_error,true_header_included
-semicolon,default_quote,true,true,true,none,false,40,true,default_escape,true,line,false_checkCol_error,true_header_excluded
-semicolon,#,false,true,false,fieldname,true,60,true,back_slash,false,line,false_maxRow_error,false
-semicolon,$,true,false,true,none,false,0,false,forward_slash,true,array,true,true_header_excluded
-colon,off,true,false,false,fieldname,true,40,false,default_escape,true,array,false_maxRow_error,false
+semicolon,default_quote,true,true,true,fieldname,true,40,true,default_escape,true,line,false_checkCol_error,false
+semicolon,#,false,true,false,none,false,60,false,back_slash,true,line,false_maxRow_error,true_header_excluded
+semicolon,$,true,false,true,fieldname,false,0,false,forward_slash,false,array,true,false
+colon,off,true,false,false,none,false,40,false,default_escape,true,array,false_maxRow_error,true_header_included
 colon,default_quote,false,true,true,none,false,60,false,back_slash,false,line,true,true_header_included
-colon,#,false,true,false,none,false,0,true,default_escape,true,array,false_no_error,true_header_excluded
-colon,$,true,false,true,fieldname,true,20,true,back_slash,false,line,false_checkCol_error,false
-dash,off,false,true,false,none,false,60,true,forward_slash,true,array,false_checkCol_error,true_header_excluded
-dash,default_quote,true,false,true,fieldname,true,0,false,back_slash,false,line,false_no_error,false
-dash,#,true,true,false,none,false,20,true,default_escape,true,line,true,true_header_included
-dash,$,false,true,true,none,false,40,false,forward_slash,false,line,false_maxRow_error,true_header_included
-default_delim,off,true,false,true,none,false,0,false,back_slash,true,array,true,true_header_excluded
-default_delim,default_quote,false,true,false,fieldname,true,20,true,forward_slash,false,line,false_maxRow_error,false
-default_delim,#,false,false,true,none,false,40,false,default_escape,false,array,false_no_error,true_header_included
-default_delim,$,true,false,false,fieldname,false,60,true,default_escape,true,line,false_no_error,false
-exclamation,off,false,true,true,none,false,0,true,back_slash,true,line,false_checkCol_error,true_header_included
-exclamation,default_quote,true,false,false,none,false,20,false,forward_slash,false,array,false_maxRow_error,true_header_excluded
-exclamation,#,false,false,true,fieldname,true,40,false,default_escape,true,line,true,false
-exclamation,$,true,true,false,none,false,60,true,back_slash,false,array,false_no_error,true_header_excluded
-default_delim,#,false,true,true,none,false,0,true,forward_slash,true,array,false_checkCol_error,true_header_excluded
-default_delim,$,false,true,false,none,false,40,true,back_slash,true,array,false_checkCol_error,true_header_included
-colon,off,false,false,true,none,false,0,true,forward_slash,false,line,false_no_error,true_header_included
+colon,#,true,false,true,none,false,0,false,default_escape,false,line,false_no_error,true_header_excluded
+colon,$,false,true,false,fieldname,true,20,true,back_slash,false,array,false_checkCol_error,false
+dash,off,true,false,true,fieldname,true,60,true,forward_slash,true,line,false_checkCol_error,false
+dash,default_quote,false,true,false,none,false,0,false,back_slash,true,array,false_no_error,true_header_excluded
+dash,#,true,true,true,none,false,20,false,default_escape,true,line,true,true_header_included
+dash,$,false,true,true,none,false,40,false,forward_slash,false,line,false_maxRow_error,true_header_excluded
+default_delim,off,true,false,false,none,false,0,false,back_slash,true,array,true,true_header_excluded
+default_delim,default_quote,false,true,true,fieldname,true,20,true,forward_slash,false,line,false_maxRow_error,false
+default_delim,#,false,true,true,fieldname,true,40,true,default_escape,true,array,false_no_error,false
+default_delim,$,false,false,false,none,false,60,false,default_escape,true,array,false_no_error,true_header_included
+exclamation,off,true,true,false,fieldname,true,0,true,back_slash,false,line,false_checkCol_error,false
+exclamation,default_quote,false,false,true,none,false,20,false,forward_slash,true,array,false_maxRow_error,true_header_excluded
+exclamation,#,true,true,true,none,false,40,false,default_escape,true,array,true,true_header_included
+exclamation,$,true,true,true,fieldname,true,60,false,default_escape,false,array,false_no_error,false
+default_delim,#,false,false,false,fieldname,false,20,true,forward_slash,false,line,false_checkCol_error,false
+colon,#,false,true,false,fieldname,true,40,true,back_slash,true,array,true,false
+colon,default_quote,true,true,true,none,false,0,false,forward_slash,true,array,true,true_header_included
