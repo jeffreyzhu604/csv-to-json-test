@@ -1,4 +1,5 @@
 import subprocess
+import os
 import pandas as pd
 import pytest
 
@@ -49,7 +50,6 @@ def read_csv(file_path):
 
     df = df.sort_values(by=["maxRowLength"], ascending=True) 
     df.to_csv('sorted.csv', index=False)
-    # print(df)
     return df
 
 def fetch_error_file(error_type, test_case_number):
@@ -70,7 +70,6 @@ def select_delimiter(param):
 def execute_command_line_option(params, csv, test_case_number):
 
     if params['noheader'] == 'true_header_excluded':
-        print(csv)
         with open(csv, 'r') as csvfile:
             data = csvfile.readlines()[1:]  
 
@@ -110,8 +109,6 @@ def execute_command_line_option(params, csv, test_case_number):
         f"{csv}"
     )
     
-    print(command)
-
     process = subprocess.run(command, shell=True, capture_output=True, text=True)
 
     output_file_path = f'../tests/actual_output/test{test_case_number}_output.json'
@@ -140,26 +137,49 @@ def test_csv_to_json():
     test_params_df = read_csv(csv_path)
 
     if test_params_df.empty:
-        print("No test parameters found. Exiting.")
         return
 
     test_case_number = 1  
 
     for _, row in test_params_df.iterrows():
         params = row.to_dict()  
-        print(f'Test Case {test_case_number}:')
-        print("Parameters:", params)
-
-        result_stdout, result_stderr = execute_command_line_option(params, f"../tests/test_files/test{test_case_number}.csv", test_case_number)
-
-        print("Output:")
-        print(result_stdout)
-        print("Error (if any):")
-        print(result_stderr)
-        print("\n" + "=" * 40 + "\n")
-
+        execute_command_line_option(params, f"../tests/test_files/test{test_case_number}.csv", test_case_number)
         test_case_number += 1  
 
+
+    error_count = 0
+    test_case_number = 1
+
+    for _ in os.listdir("../tests/logs"):
+        log_file = os.path.join("../tests/logs", f"test_case_{test_case_number}_log.txt")
+        output_file = os.path.join("../tests/actual_output", f"test{test_case_number}_output.json")
+        expected_txt_file = os.path.join("../tests/expected_output", f"test{test_case_number}_expected_output.txt")
+        expected_json_file = os.path.join("../tests/expected_output", f"test{test_case_number}_expected_output.json")
+
+        if os.path.exists(expected_txt_file):
+            with open(log_file, 'r') as log:
+                log_content = log.read()
+            with open(expected_txt_file, 'r') as expected_txt:
+                expected_error_message = expected_txt.read()
+            if expected_error_message not in log_content:
+                error_count += 1
+        else:
+            if os.path.exists(expected_json_file):
+                if not os.path.exists(output_file):
+                    error_count += 1
+                else:
+                    with open(expected_json_file, 'r') as expected_json:
+                        expected_data = expected_json.read()
+                    with open(output_file, 'r') as actual_json:
+                        actual_data = actual_json.read()
+                    
+                    if expected_data != actual_data:
+                        error_count += 1
+
+        test_case_number += 1
+
+    test_case_number -= 1
+    assert error_count == 0, f"Tests passed: {test_case_number - error_count}/{test_case_number}"
 
 if __name__ == "__main__":
     pytest.main()

@@ -1,7 +1,3 @@
-Test Case 1:
-command
-csvtojson --delimiter='[";"]' --quote=$ --trim=true --ignoreEmpty=true --noheader=false --headers='["fname.nickname","lname","age","countryOfResidences.city.town","slogan.best","slogan.worst"]' --flatKeys=false --checkType=false --maxRowLength=0 --checkColumn=false --quiet=true --escape=/ --nullObject=false --downstreamFormat=array ../tests/test_files/test1.csv
-Output:
 [
 [,
 {"fname":{"nickname":"Jeff"},"lname":"Zhu","age":"90","countryOfResidences":{"city":{"town":"Vancouver"}},"slogan":{"best":"Ayyy","worst":"haha"}},,
@@ -16,6 +12,3 @@ Output:
 {"fname":{"nickname":"HoJun"},"lname":"null","age":"26","countryOfResidences":{"city":{"town":"Lougheed"}},"slogan":{"best":" \"Life's good\" ","worst":"wompwomp"}},,
 ]
 ]
-
-Error:
-No Error Captured

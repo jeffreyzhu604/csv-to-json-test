@@ -1,7 +1,3 @@
-Test Case 12:
-command
-csvtojson --delimiter='[";"]' --quote=off --trim=false --ignoreEmpty=false --noheader=true  --flatKeys=false --checkType=false --maxRowLength=20 --checkColumn=false --quiet=false --escape=/ --nullObject=false --downstreamFormat=array ../tests/test_files/test12_no_error.csv
-Output:
 [
 [,
 {"field1":"fname.nickname","field2":" lname","field3":" age"},,
@@ -17,6 +13,3 @@ Output:
 {"field1":"HoJun","field2":"null","field3":" 26","field4":" Lougheed","field5":" \"/\"Life's good/\"\"","field6":" \"wompwomp\""},,
 ]
 ]
-
-Error:
-No Error Captured

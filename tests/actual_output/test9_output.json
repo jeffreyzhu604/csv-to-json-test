@@ -1,7 +1,3 @@
-Test Case 9:
-command
-csvtojson --delimiter='["!"]'  --trim=false --ignoreEmpty=true --noheader=true  --flatKeys=false --checkType=false --maxRowLength=20 --checkColumn=false --quiet=false --escape=/ --nullObject=true --downstreamFormat=array ../tests/test_files/test9_max_row_error.csv
-Output:
 [
 [,
 {"field1":"Jeff","field2":" Zhu","field3":" 90","field4":" Vancouver","field5":" \"Ayyy\"","field6":" \"haha\""},,
@@ -16,6 +12,3 @@ Output:
 {"field1":"HoJun","field2":null,"field3":" 26","field4":" Lougheed","field5":" \"/\"Life's good/\"\"","field6":" \"wompwomp\""},,
 ]
 ]
-
-Error:
-No Error Captured
